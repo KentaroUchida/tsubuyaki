@@ -24,7 +24,7 @@
     <form th:action="@{/search}" th:object="${searchForm}" method="get">
         <label for="keyword">キーワード:</label>
         <input type="text" required th:field="*{comment}" />
-        <input type="submit" value="検索" />
+        <input type="submit" value="検索する" />
     </form>
     <h2>タイトルへ</h2>
     <a th:href="@{/}">戻る</a>

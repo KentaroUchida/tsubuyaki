@@ -52,6 +52,7 @@ public class TsubuyakiController {
     String ShowSearchTsubuyakiList(@ModelAttribute("searchForm") SearchForm form,Model model){
         List<Tsubuyaki> list = ts.getSearchTsubuyaki(form.getComment()); //検索したつぶやきを取得
         model.addAttribute("searchList", list);   //モデル属性にリストをセット
+        model.addAttribute("length", list.size());
         //model.addAttribute("tsubuyakiForm", new TsubuyakiForm());  //空フォームをセット
         return "search_list";
     }

@@ -2,17 +2,18 @@
 <html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>みんなのつぶやき</title>
+    <title>検索結果</title>
 </head>
   
 <body>
-    <h1>みんなのつぶやき</h1>
+    <h1>[[${length}]]件の検索結果</h1>
     <ul>
         <li th:each="t: ${searchList}">
             [[${t.comment}]] -- [[${t.name}]] on [[${t.createdAt}]]
         </li>
     </ul>
-    <h2>タイトルへ</h2>
-    <a th:href="@{/read}">戻る</a>
+    <h2>みんなのつぶやきに
+        <a th:href="@{/read}">戻る</a>
+    </h2>
 </body>
 </html>
